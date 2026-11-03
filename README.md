@@ -6,6 +6,31 @@ The toolkit is designed to sit **beside** Microsoft's [Copilot Agent Kit](https:
 
 > **Not legal or regulatory advice.** These are a practitioner's working templates. Risk-rating matrices, test counts, thresholds, approvers and review intervals are **illustrative examples, not standards**. Your institution's model risk management, compliance and legal teams decide how E-23 or any other rule applies to your agents. Verify product features in your own tenant before relying on them.
 
+## What problem does this solve?
+
+Companies are building AI assistants ("agents") in Microsoft Copilot Studio faster than they can keep track of them. Building one is easy. The hard questions come later: Who owns this agent? What is it allowed to do? Has anyone tested it? What happens if it gives a wrong answer?
+
+In regulated industries like banking and insurance, those aren't nice-to-haves. Regulators expect you to answer them. In Canada, OSFI's Guideline E-23 takes effect in 2027 and covers AI models, which can include these agents.
+
+Microsoft's free Copilot Agent Kit already finds your agents and records the technical details. What it doesn't record is the human side: who's accountable, what the agent is approved for, how risky it is, and when it was last checked. This toolkit fills that gap.
+
+## How to get it
+
+1. To read a document, click it in the [`docs`](docs) folder. It opens right in your browser.
+2. To download everything, click the green **Code** button at the top of this page, then **Download ZIP**.
+3. To download one Word template, open the `.docx` file and click the **download** icon at the top right.
+
+It's free. You don't need a GitHub account to read or download it.
+
+## How to use it
+
+1. **Start with the E-23 map.** Read it with your risk or compliance team. It explains which agents need governance and which are low-risk enough to just list.
+2. **Fill in an Agent Fact Sheet for each agent.** It's one page. The business owner fills in what only a person can know: who owns it, what it's for, and what it must never be used for. The technical fields can be copied from the Copilot Agent Kit.
+3. **Test before you release.** Use the Evaluation Pack to write test questions, including ones the agent should refuse. Agree on a passing score before you run them. For higher-risk agents, have someone who didn't build the agent check the results.
+4. **When you have more than a handful of agents, turn it into an app.** Your IT team runs the PowerShell script once (see [Running the Dataverse script](#running-the-dataverse-script)). It sets up the tables for an agent register in Power Platform, which tracks approvals, reviews and retirements in one place.
+
+You don't have to use all of it. Many teams start with just the Fact Sheet.
+
 ## What's inside
 
 | Piece | What it is | Format |
@@ -18,13 +43,10 @@ The toolkit is designed to sit **beside** Microsoft's [Copilot Agent Kit](https:
 
 The Markdown files are for reading on GitHub. The Word files are the source versions, ready to adapt.
 
-## Getting started
+## Technical setup notes
 
-1. **Read the E-23 map first.** It explains why a Copilot Studio agent can fall inside E-23's definition of a model, and which agents are candidates for a negligible-risk category.
-2. **Install the Copilot Agent Kit** in a development environment and run Agent Inventory, so the Auto fields have a source.
-3. **Pilot the Fact Sheet** on one or two agents with their business owners.
-4. **Agree your own thresholds** for the rating matrix and evaluation minimums with your model risk team.
-5. **Build the register** when you're ready to run it as an app (see below).
+- Install the [Copilot Agent Kit](https://learn.microsoft.com/microsoft-copilot-studio/guidance/kit-install) in a development environment and run Agent Inventory, so the Fact Sheet's Auto fields have a source.
+- Agree your own thresholds for the rating matrix and evaluation minimums with your model risk team before you rely on them.
 
 ## Running the Dataverse script
 
