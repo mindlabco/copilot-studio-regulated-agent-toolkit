@@ -1,6 +1,6 @@
 # Responsible Agent Toolkit for Copilot Studio
 
-Governance templates for teams running Microsoft Copilot Studio agents in regulated industries, with a focus on Canadian financial services and OSFI Guideline E-23 (Model Risk Management).
+Governance templates for teams running Microsoft Copilot Studio agents in regulated industries, including a mapping to OSFI Guideline E-23 (Model Risk Management).
 
 The toolkit is designed to sit **beside** Microsoft's [Copilot Agent Kit](https://learn.microsoft.com/microsoft-copilot-studio/guidance/kit-overview) (formerly the Copilot Studio Kit), not replace it. The Kit's Agent Inventory and Compliance Hub capture a lot of technical detail about your agents. This toolkit adds the governance layer a model risk function will ask for: ownership, approved uses, risk rating, evaluation evidence, review dates and retirement records.
 
